@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 using namespace std;
 
@@ -33,6 +34,6 @@ double Tinh(double x, int n)
 string Process(double x, int n)
 {
 	stringstream stream;
-	stream << Tinh(x, n);
+	stream << fixed << setprecision(2) << Tinh(x, n);
 	return stream.str();
 }
